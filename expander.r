@@ -6,8 +6,8 @@ en <- readLines("[your_file_to_encrypt_here].txt")
 #perlu ditulis path directory secara lengkap
 
 en <- unlist(str_split(en, pattern = " "))
-en <- paste(paste(substr(en, 2, nchar(en)), 
-            substr(en, 1, 1), "xxx", sep = ""),
+enc <- paste(paste(substr(en, 2, nchar(en)), 
+            substr(en, 1, 1), "xyz", sep = ""),
             collapse = " ")
 write.table(en, file = "ngecobaa.txt", row.names = FALSE, 
             col.names = FALSE, quote = FALSE)
